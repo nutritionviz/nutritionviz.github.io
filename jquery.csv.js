@@ -10,7 +10,7 @@
  * plugin is influenced by jquery-json (http://code.google.com/p/jquery-json/).
  * If you're looking to use native JSON.Stringify but want additional backwards
  * compatibility for browsers that don't support it, I highly recommend you
- * check it out.
+ * check it out. 
  *
  * A special thanks goes out to rwk@acm.org for providing a lot of valuable
  * feedback to the project including the core for the new FSM
@@ -96,7 +96,7 @@ RegExp.escape = function (s) {
         let value = ''
         let exit = false
 
-        function endOfEntry () {
+        function endOfEntry() {
           // reset the state
           state = 0
           value = ''
@@ -135,7 +135,7 @@ RegExp.escape = function (s) {
           options.state.colNum = 1
         }
 
-        function endOfValue () {
+        function endOfValue() {
           if (options.onParseValue === undefined) {
             // onParseValue hook not set
             entry.push(value)
@@ -247,7 +247,7 @@ RegExp.escape = function (s) {
                 break
               }
               if (m0 === delimiter) {
-              // non-compliant data
+                // non-compliant data
                 throw Error('CSVDataError: Illegal Quote [Row:' + options.state.rowNum + '][Col:' + options.state.colNum + ']')
               }
               // broken parser?
@@ -293,7 +293,7 @@ RegExp.escape = function (s) {
         let entry = ''
         let exit = false
 
-        function endOfLine () {
+        function endOfLine() {
           // reset the state
           state = 0
 
@@ -472,7 +472,7 @@ RegExp.escape = function (s) {
         let state = 0
         let value = ''
 
-        function endOfValue () {
+        function endOfValue() {
           if (options.onParseValue === undefined) {
             // onParseValue hook not set
             entry.push(value)
@@ -611,8 +611,8 @@ RegExp.escape = function (s) {
         for (o in objects) {
           for (propName in objects[o]) {
             if ((objects[o].hasOwnProperty(propName)) &&
-                (props.indexOf(propName) < 0) &&
-                (typeof objects[o][propName] !== 'function')) {
+              (props.indexOf(propName) < 0) &&
+              (typeof objects[o][propName] !== 'function')) {
               props.push(propName)
             }
           }

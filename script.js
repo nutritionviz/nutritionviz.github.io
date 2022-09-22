@@ -9,13 +9,13 @@ $.get("https://nutritionviz.github.io/data.csv", function (CSVdata) {
         delimiter: "\n",
         separator: ',', // Sets a custom field separator character
     });
+    data.shift()
     selectNutYear('1', '1990')
 });
 
 
 function selectNutYear(nut, year) {
     var new_data = [['Region', 'Median Intake']];
-    data.shift()
     console.log(data)
     for (const row of data) {
         if (row[1] == year && row[3] == nut) {
@@ -39,6 +39,8 @@ function doChart(new_data) {
         var options = {
             colorAxis: {
                 colors: ['#ff5757', 'white']
+                // minValue: 0,
+                // maxValue: 400
             },
             datalessRegionColor: '#d9d9d9',
             defaultColor: '#f5f5f5',
@@ -92,3 +94,5 @@ function updateMap() {
 
 nutEl.value = 1
 yearEL.value = 1990
+
+
