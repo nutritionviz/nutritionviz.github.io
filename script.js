@@ -38,7 +38,7 @@ function doChart(new_data) {
     function drawRegionsMap() {
         var options = {
             colorAxis: {
-                colors: ['#ff5757', 'white']
+                colors: ['#5e03fc', '#2dfc03', '#fceb03', '#fc8803', '#ff0000'],
                 // minValue: 0,
                 // maxValue: 400
             },
